@@ -49,8 +49,8 @@ public class Decryptor
 	public void run() throws IOException, InvalidKeySpecException, NoSuchAlgorithmException, InvalidKeyException, BadPaddingException, NoSuchPaddingException, IllegalBlockSizeException
 	{
 		// locate properties file
-		File rlFolder = new File(System.getProperty("user.home"), ".runelite");
-		File rlpProps = new File(rlFolder, "runeliteplus.properties");
+		File rlFolder = new File(System.getProperty("user.home"), ".openosrs");
+		File rlpProps = new File(rlFolder, "settings.properties");
 
 		// read properties in to map
 		Properties properties = new Properties();
@@ -59,8 +59,8 @@ public class Decryptor
 		fr.close();
 
 		// load base64 encrypted data and salt
-		String encrypted = properties.getProperty("profiles.profilesData");
-		String salt = properties.getProperty("profiles.salt");
+		String encrypted = properties.getProperty("betterProfiles.profilesData");
+		String salt = properties.getProperty("betterProfiles.salt");
 
 		// remove prepended ¬ from data
 		if (encrypted.startsWith("¬"))
