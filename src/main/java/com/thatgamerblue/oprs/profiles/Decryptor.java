@@ -49,8 +49,8 @@ public class Decryptor
 	public void run() throws IOException, InvalidKeySpecException, NoSuchAlgorithmException, InvalidKeyException, BadPaddingException, NoSuchPaddingException, IllegalBlockSizeException
 	{
 		// locate properties file
-		File rlFolder = new File(System.getProperty("user.home"), ".openosrs");
-		File rlpProps = new File(rlFolder, "settings.properties");
+		File rlFolder = new File(System.getProperty("user.home"), ".runelite");
+		File rlpProps = new File(rlFolder, "hydratech.properties");
 
 		// read properties in to map
 		Properties properties = new Properties();
